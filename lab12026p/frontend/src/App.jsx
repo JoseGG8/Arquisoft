@@ -104,7 +104,7 @@ function App() {
           <button className={activeView === 'transfer' ? 'nav-item active' : 'nav-item'} onClick={() => setActiveView('transfer')}><span>03</span> Transferir</button>
           <button className={activeView === 'history' ? 'nav-item active' : 'nav-item'} onClick={() => setActiveView('history')}><span>04</span> Historial</button>
         </nav>
-        <div className="sidebar-foot"><span className="status-dot" /> API conectada<div className="api-url">localhost:8080</div></div>
+        <div className="sidebar-foot"><span className="status-dot" /> API conectada<div className="api-url">arquisoft-uidq.onrender.com</div></div>
       </aside>
 
       <section className="content">
