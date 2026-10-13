@@ -4,13 +4,13 @@ Proyecto de demostración desarrollado con **Spring Boot** que implementa una ap
 
 ## Tecnologías Utilizadas
 
-- **Java 17** - Lenguaje de programación
-- **Spring Boot 3.5.11** - Framework principal
+- **Java 23** - Lenguaje de programación
+- **Spring Boot 3.6.10** - Framework principal
 - **Spring Data JPA** - Persistencia y acceso a datos
 - **MySQL** - Base de datos relacional
 - **MapStruct 1.5.5** - Mapeo de objetos DTOs
 - **Lombok 1.18.30** - Reducción de código boilerplate
-- **Jackson 2.15.0** - Serialización/deserialización JSON
+- **Jackson 2.17.1** - Serialización/deserialización JSON
 - **Maven** - Gestor de dependencias y construcción
 
 ## Descripción
@@ -19,7 +19,7 @@ Este proyecto es una aplicación REST construida con Spring Boot que proporciona
 
 ## Requisitos
 
-- Java 17 o superior
+- Java 23 o superior
 - Maven 3.6+
 - MySQL 8.0+
 
