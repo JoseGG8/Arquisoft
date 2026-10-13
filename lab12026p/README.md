@@ -1,3 +1,14 @@
+## Estado del Código (SonarQube / SonarCloud)
+
+| Métrica | Estado / Badge |
+| :--- | :--- |
+| **Quality Gate** | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=JoseGG8_Arquisoft_lab12026p&metric=alert_status)](https://sonarcloud.io/dashboard?id=JoseGG8_Arquisoft_lab12026p) |
+| **Cobertura de Pruebas** | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=JoseGG8_Arquisoft_lab12026p&metric=coverage)](https://sonarcloud.io/dashboard?id=JoseGG8_Arquisoft_lab12026p) |
+| **Bugs** | [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=JoseGG8_Arquisoft_lab12026p&metric=bugs)](https://sonarcloud.io/dashboard?id=JoseGG8_Arquisoft_lab12026p) |
+| **Vulnerabilidades** | [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=JoseGG8_Arquisoft_lab12026p&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=JoseGG8_Arquisoft_lab12026p) |
+| **Code Smells** | [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=JoseGG8_Arquisoft_lab12026p&metric=code_smells)](https://sonarcloud.io/dashboard?id=JoseGG8_Arquisoft_lab12026p) |
+| **Duplicación de Código** | [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=JoseGG8_Arquisoft_lab12026p&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=JoseGG8_Arquisoft_lab12026p) |
+
 # Lab 12026p - Proyecto Spring Boot
 
 Proyecto de demostración desarrollado con **Spring Boot** que implementa una aplicación backend con gestión de datos y validación.
@@ -26,11 +37,7 @@ Este proyecto es una aplicación REST construida con Spring Boot que proporciona
 ## Construcción y Ejecución
 
 ```bash
-# Compilar el proyecto
-./mvnw clean install
-
-# Ejecutar la aplicación
-./mvnw spring-boot:run
+npm run dev
 ```
 
-La aplicación estará disponible en `http://localhost:8080`
+La aplicación estará disponible en `https://arquisoft-uidq.onrender.com`
