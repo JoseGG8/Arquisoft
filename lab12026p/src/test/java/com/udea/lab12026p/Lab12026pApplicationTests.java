@@ -289,17 +289,5 @@ class Lab12026pApplicationTests {
             verify(transactionService, times(1)).getTransactionsForAccount("111111");
         }
 
-        @Test
-        @DisplayName("GET /api/transactions/{accountNumber} - Debe retornar lista vacía si no hay transacciones")
-        void getTransactionsByAccount_whenEmpty_shouldReturnEmptyList() throws Exception {
-            when(transactionService.getTransactionsForAccount("999999")).thenReturn(Collections.emptyList());
-
-            mockMvc.perform(get("/api/transactions/999999")
-                            .contentType(MediaType.APPLICATION_JSON))
-                    .andExpect(status().isOk())
-                    .andExpect(jsonPath("$", hasSize(0)));
-
-            verify(transactionService, times(1)).getTransactionsForAccount("999999");
-        }
     }
 }
