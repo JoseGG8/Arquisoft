@@ -2,7 +2,6 @@ package com.udea.lab12026p.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Generated;
 
 import java.time.LocalDateTime;
 
