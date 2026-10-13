@@ -1,5 +1,12 @@
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'https://arquisoft-uidq.onrender.com/api').replace(/\/+$/, '')
+
 async function request(path, options = {}) {
-  const response = await fetch(path, {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`
+  const endpoint = cleanPath.startsWith('/api')
+    ? `${API_BASE_URL}${cleanPath.slice(4)}`
+    : `${API_BASE_URL}${cleanPath}`
+
+  const response = await fetch(endpoint, {
     headers: { 'Content-Type': 'application/json', ...options.headers },
     ...options,
   })

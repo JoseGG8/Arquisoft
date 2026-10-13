@@ -6,7 +6,10 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': 'https://arquisoft-uidq.onrender.com',
+      '/api': {
+        target: 'https://arquisoft-uidq.onrender.com',
+        changeOrigin: true,
+      },
     },
   },
 })
