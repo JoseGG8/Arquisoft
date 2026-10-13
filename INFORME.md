@@ -124,6 +124,8 @@ Al analizar el comportamiento del orquestador se identificaron las siguientes in
    * *Solución:* Se configuraron explícitamente los permisos `contents: read` y `pull-requests: write`.
 4. **Despliegue de Docker:**
    * La acción `mr-smithers-excellent/docker-build-push@v6` fue configurada con el contexto `directory: lab12026p` y `dockerfile: lab12026p/Dockerfile`, consumiendo las credenciales seguras `DOCKER_USERNAME` y `DOCKER_PASSWORD`.
+5. **Orquestación del Despliegue en Render vía Deploy Hook:**
+   * Se incorporó un job final `deploy` en `build.yml` dependiente de `build`. Este job se ejecuta tras la aprobación o push en la rama principal y dispara el webhook seguro de Render (`curl -f -X POST "$RENDER_DEPLOY_HOOK"`). De este modo, el despliegue en la nube ocurre exclusivamente cuando las pruebas unitarias y el análisis de calidad han concluido con éxito.
 
 ### 4.6. Despliegue en la Nube (Render) y Transición a Base de Datos H2 en Memoria
 
