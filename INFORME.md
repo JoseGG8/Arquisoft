@@ -141,11 +141,11 @@ Al desplegar la imagen generada en la plataforma Render, la aplicación present�
 
 ## 5. Resultados Obtenidos
 
-1. **Pruebas Unitarias Robustas:**
-   * Se alcanzaron 11 pruebas unitarias ejecutadas de manera satisfactoria (`Tests run: 11, Failures: 0, Errors: 0, Skipped: 0`) con un tiempo de ejecución inferior a 6 segundos.
-   * La eliminación del acoplamiento a la base de datos MySQL permitió que las pruebas se ejecuten limpiamente tanto en estaciones de desarrollo locales como en los servidores remotos de GitHub Actions.
-2. **Generación Automatizada de Cobertura:**
-   * JaCoCo generó con éxito el archivo `jacoco.xml`, permitiendo auditar la cobertura de líneas e instrucciones en los controladores, entidades y servicios.
+1. **Pruebas Unitarias Robustas y Cobertura Integral:**
+   * Se alcanzaron **38 pruebas unitarias** ejecutadas de manera satisfactoria (`Tests run: 38, Failures: 0, Errors: 0, Skipped: 0`), abarcando controladores, servicios con lógica de negocio, mapeadores MapStruct, entidades JPA y DTOs.
+   * La eliminación del acoplamiento a la base de datos MySQL mediante mocks aislados con Mockito permitió que las pruebas se ejecuten limpiamente en menos de 12 segundos.
+2. **Generación Automatizada de Cobertura (100% JaCoCo):**
+   * JaCoCo generó con éxito el reporte auditando el 100% de las instrucciones, líneas y ramas del código de producción (`lab12026p`), superando con creces el umbral mínimo del 80% exigido por los Quality Gates de SonarCloud.
 3. **Pipeline de Integración Continua Operativo:**
    * El flujo de trabajo en GitHub Actions ejecuta secuencialmente los tres jobs planificados:
      * **`tests`:** Compila, ejecuta las pruebas JUnit 5 y genera las métricas de cobertura.
