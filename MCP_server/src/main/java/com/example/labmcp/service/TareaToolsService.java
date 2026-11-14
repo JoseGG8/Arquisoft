@@ -48,6 +48,11 @@ public class TareaToolsService {
         return repo.findByTituloContainingIgnoreCase(fragmento);
     }
 
+    @Tool(name = "contarTareas", description = "Devuelve el número total de tareas registradas en la base de datos (tanto pendientes como completadas).")
+    public long contarTareas() {
+        return repo.count();
+    }
+
     // ---------- CREATE ----------
 
     @Tool(name = "crearTarea", description = "Crea una nueva tarea con el título y fecha indicados. Por defecto queda como pendiente.")
