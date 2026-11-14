@@ -42,6 +42,11 @@ public class TareaToolsService {
         return repo.findByCompletado(false);
     }
 
+    @Tool(name = "listarCompletadas", description = "Devuelve únicamente las tareas completadas (completado = true).")
+    public List<Tarea> listarCompletadas() {
+        return repo.findByCompletado(true);
+    }
+
     @Tool(name = "buscarTareas", description = "Busca tareas cuyo título contiene el fragmento indicado (case-insensitive).")
     public List<Tarea> buscarTareas(
             @ToolParam(description = "Fragmento de texto a buscar en el título") String fragmento) {
