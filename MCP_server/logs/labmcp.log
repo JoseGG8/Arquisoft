@@ -106,3 +106,39 @@
 2026-11-14T13:40:22.937-05:00  INFO 10572 --- [labmcp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-11-14T13:40:22.944-05:00  INFO 10572 --- [labmcp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-11-14T13:40:22.958-05:00  INFO 10572 --- [labmcp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-14T13:45:46.521-05:00  INFO 16876 --- [labmcp] [main] c.example.labmcp.LabmcpApplicationTests  : Starting LabmcpApplicationTests using Java 23.0.2 with PID 16876 (started by Jose Luis GIl in C:\Users\Jose Luis GIl\Documents\Cursos 2026-2\Arquisoft\MCP_server)
+2026-11-14T13:45:46.526-05:00  INFO 16876 --- [labmcp] [main] c.example.labmcp.LabmcpApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2026-11-14T13:45:47.911-05:00  INFO 16876 --- [labmcp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-14T13:45:48.113-05:00  INFO 16876 --- [labmcp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 189 ms. Found 1 JPA repository interface.
+2026-11-14T13:45:48.661-05:00  WARN 16876 --- [labmcp] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-11-14T13:45:48.663-05:00  WARN 16876 --- [labmcp] [main] trationDelegate$BeanPostProcessorChecker : Bean 'serverAnnotatedBeanRegistry' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration$ServerMcpAnnotatedBeans] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-11-14T13:45:48.674-05:00  WARN 16876 --- [labmcp] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.ai.mcp.server.annotation-scanner-org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerProperties' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-11-14T13:45:48.795-05:00  INFO 16876 --- [labmcp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-14T13:45:49.074-05:00  INFO 16876 --- [labmcp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@788e3702
+2026-11-14T13:45:49.076-05:00  INFO 16876 --- [labmcp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-14T13:45:49.179-05:00  INFO 16876 --- [labmcp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-14T13:45:49.267-05:00  INFO 16876 --- [labmcp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-11-14T13:45:49.453-05:00  INFO 16876 --- [labmcp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-14T13:45:49.981-05:00  INFO 16876 --- [labmcp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-14T13:45:50.082-05:00  WARN 16876 --- [labmcp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-14T13:45:50.113-05:00  INFO 16876 --- [labmcp] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-14T13:45:51.123-05:00  INFO 16876 --- [labmcp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-14T13:45:51.177-05:00  INFO 16876 --- [labmcp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-14T13:45:52.360-05:00  WARN 16876 --- [labmcp] [main] o.s.m.provider.tool.SyncMcpToolProvider  : No tool methods found in the provided tool objects: []
+2026-11-14T13:45:52.374-05:00  INFO 16876 --- [labmcp] [main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable tools capabilities, notification: true
+2026-11-14T13:45:52.376-05:00  INFO 16876 --- [labmcp] [main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Registered tools: 9
+2026-11-14T13:45:52.377-05:00  INFO 16876 --- [labmcp] [main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable resources capabilities, notification: true
+2026-11-14T13:45:52.377-05:00  INFO 16876 --- [labmcp] [main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable resources templates capabilities, notification: true
+2026-11-14T13:45:52.378-05:00  INFO 16876 --- [labmcp] [main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable prompts capabilities, notification: true
+2026-11-14T13:45:52.378-05:00  INFO 16876 --- [labmcp] [main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable completions capabilities
+2026-11-14T13:45:52.662-05:00  INFO 16876 --- [labmcp] [main] c.example.labmcp.LabmcpApplicationTests  : Started LabmcpApplicationTests in 6.554 seconds (process running for 7.739)
+2026-11-14T13:45:53.275-05:00  INFO 16876 --- [labmcp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-14T13:45:53.282-05:00  INFO 16876 --- [labmcp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-14T13:45:53.292-05:00  INFO 16876 --- [labmcp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

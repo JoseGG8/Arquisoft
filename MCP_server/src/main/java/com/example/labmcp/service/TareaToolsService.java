@@ -7,6 +7,8 @@ import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 
 /**
@@ -64,7 +66,8 @@ public class TareaToolsService {
     @Transactional
     public Tarea crearTarea(
             @ToolParam(description = "Título descriptivo de la tarea") String titulo,
-            @ToolParam(description = "Fecha asociada, formato libre (p.ej. 2026-04-20)") String fecha) {
+            @ToolParam(description = "Fecha asociada en formato ISO yyyy-MM-dd (p.ej. 2026-04-20)") String fecha) {
+        validarFechaIso(fecha);
         Tarea t = new Tarea(titulo, fecha, Boolean.FALSE);
         return repo.save(t);
     }
@@ -86,11 +89,14 @@ public class TareaToolsService {
     public Tarea actualizarTarea(
             @ToolParam(description = "Id de la tarea a actualizar") Long id,
             @ToolParam(description = "Nuevo título (opcional, null = no cambiar)") String titulo,
-            @ToolParam(description = "Nueva fecha (opcional, null = no cambiar)") String fecha) {
+            @ToolParam(description = "Nueva fecha en formato ISO yyyy-MM-dd (opcional, null = no cambiar)") String fecha) {
         Tarea t = repo.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("No existe la tarea " + id));
         if (titulo != null && !titulo.isBlank()) t.setTitulo(titulo);
-        if (fecha  != null && !fecha.isBlank())  t.setFecha(fecha);
+        if (fecha  != null && !fecha.isBlank()) {
+            validarFechaIso(fecha);
+            t.setFecha(fecha);
+        }
         return repo.save(t);
     }
 
@@ -105,5 +111,18 @@ public class TareaToolsService {
         }
         repo.deleteById(id);
         return "Tarea " + id + " eliminada correctamente.";
+    }
+
+    private void validarFechaIso(String fecha) {
+        if (fecha == null || !fecha.matches("\\d{4}-\\d{2}-\\d{2}")) {
+            throw new IllegalArgumentException(
+                    "La fecha '" + fecha + "' no es válida. Debe tener el formato ISO yyyy-MM-dd (p.ej. 2026-04-20).");
+        }
+        try {
+            LocalDate.parse(fecha);
+        } catch (DateTimeParseException e) {
+            throw new IllegalArgumentException(
+                    "La fecha '" + fecha + "' no es una fecha de calendario válida en formato ISO yyyy-MM-dd.", e);
+        }
     }
 }
